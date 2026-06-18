@@ -9,13 +9,13 @@ import {
 
 const router = express.Router();
 
-// Lấy tất cả sản phẩm + tạo sản phẩm
+
 router
   .route("/")
   .get(getProducts)
   .post(createProduct);
 
-// Lấy 1 sản phẩm / cập nhật / xoá theo ID
+
 router
   .route("/:id")
   .get(getProductById)

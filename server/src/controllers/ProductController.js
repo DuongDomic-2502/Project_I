@@ -43,14 +43,7 @@ export const getProductById = async (req, res) => {
 // @route   POST /api/products
 export const createProduct = async (req, res) => {
   try {
-    const { name, brand, category, price } = req.body;
-
-    const newProduct = await Product.create({
-      name,
-      brand,
-      category,
-      price,
-    });
+    const newProduct = await Product.create(req.body);
 
     res.status(201).json({
       success: true,
